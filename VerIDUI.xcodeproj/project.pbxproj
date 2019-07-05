@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -135,6 +135,30 @@
 		3BE9F3F4220AFC15002C11BE /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/VerIDViewController.strings; sourceTree = "<group>"; };
 		3BE9F3F7220AFD50002C11BE /* SessionViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewControllersFactory.swift; sourceTree = "<group>"; };
 		499677290B5756B6FB4FE338 /* Pods-VerIDUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerIDUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VerIDUI/Pods-VerIDUI.debug.xcconfig"; sourceTree = "<group>"; };
+		63A0346B22B8CA09006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/FaceDetectionAlertController.strings"; sourceTree = "<group>"; };
+		63A0346C22B8CA09006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Result.strings"; sourceTree = "<group>"; };
+		63A0346D22B8CA09006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Tips.strings"; sourceTree = "<group>"; };
+		63A0346E22B8CA09006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/VerIDRegistrationViewController.strings"; sourceTree = "<group>"; };
+		63A0346F22B8CA0A006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/VerIDViewController.strings"; sourceTree = "<group>"; };
+		63A0347022B8CA0A006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		63A0347122B8CA0A006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Main.strings"; sourceTree = "<group>"; };
+		63A0347222B8CA0A006AFE17 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		63A0347322B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/FaceDetectionAlertController.strings"; sourceTree = "<group>"; };
+		63A0347422B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/Result.strings"; sourceTree = "<group>"; };
+		63A0347522B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/Tips.strings"; sourceTree = "<group>"; };
+		63A0347622B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/VerIDRegistrationViewController.strings"; sourceTree = "<group>"; };
+		63A0347722B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/VerIDViewController.strings"; sourceTree = "<group>"; };
+		63A0347822B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		63A0347922B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/Main.strings"; sourceTree = "<group>"; };
+		63A0347A22B8CA2D006AFE17 /* es-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-US"; path = "es-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		63A0347B22B8CA43006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/FaceDetectionAlertController.strings"; sourceTree = "<group>"; };
+		63A0347C22B8CA43006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Result.strings"; sourceTree = "<group>"; };
+		63A0347D22B8CA43006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Tips.strings"; sourceTree = "<group>"; };
+		63A0347E22B8CA44006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/VerIDRegistrationViewController.strings"; sourceTree = "<group>"; };
+		63A0347F22B8CA44006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/VerIDViewController.strings"; sourceTree = "<group>"; };
+		63A0348022B8CA44006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		63A0348122B8CA44006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Main.strings"; sourceTree = "<group>"; };
+		63A0348222B8CA44006AFE17 /* en-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-CA"; path = "en-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A391F7B4BFBD41A615FF8CA6 /* Pods-VerIDUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerIDUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-VerIDUI/Pods-VerIDUI.release.xcconfig"; sourceTree = "<group>"; };
 		CF6F05DAD06B0C752A98ABFF /* Pods-Ver-ID Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ver-ID Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ver-ID Sample/Pods-Ver-ID Sample.release.xcconfig"; sourceTree = "<group>"; };
 		D7389D23F4B809AD5ED755C9 /* Pods_VerIDUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VerIDUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,7 +349,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Applied Recognition";
 				TargetAttributes = {
 					3B326B1522089C88005DAE1E = {
@@ -347,6 +371,9 @@
 				Base,
 				vi,
 				fr,
+				"fr-CA",
+				"es-US",
+				"en-CA",
 			);
 			mainGroup = 3B326B0C22089C88005DAE1E;
 			productRefGroup = 3B326B1722089C88005DAE1E /* Products */;
@@ -415,17 +442,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Ver-ID Sample/Pods-Ver-ID Sample-frameworks.sh",
-				"${PODS_ROOT}/Ver-ID-Core/VerIDCore.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ver-ID Sample/Pods-Ver-ID Sample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VerIDCore.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ver-ID Sample/Pods-Ver-ID Sample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ver-ID Sample/Pods-Ver-ID Sample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ver-ID Sample/Pods-Ver-ID Sample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DFBE92CAC3F3BBFCDB1F1A9D /* [CP] Check Pods Manifest.lock */ = {
@@ -501,6 +527,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BB20469221428AE00B3B312 /* Base */,
+				63A0347022B8CA0A006AFE17 /* fr-CA */,
+				63A0347822B8CA2D006AFE17 /* es-US */,
+				63A0348022B8CA44006AFE17 /* en-CA */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -509,6 +538,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				3BB2046C221428B900B3B312 /* Base */,
+				63A0347122B8CA0A006AFE17 /* fr-CA */,
+				63A0347922B8CA2D006AFE17 /* es-US */,
+				63A0348122B8CA44006AFE17 /* en-CA */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -519,6 +551,9 @@
 				3BE9F3C6220AFB6D002C11BE /* Base */,
 				3BE9F3F3220AFC11002C11BE /* fr */,
 				3BE9F3F4220AFC15002C11BE /* vi */,
+				63A0346F22B8CA0A006AFE17 /* fr-CA */,
+				63A0347722B8CA2D006AFE17 /* es-US */,
+				63A0347F22B8CA44006AFE17 /* en-CA */,
 			);
 			name = VerIDViewController.xib;
 			sourceTree = "<group>";
@@ -529,6 +564,9 @@
 				3BE9F3C8220AFB6D002C11BE /* Base */,
 				3BE9F3DC220AFB8C002C11BE /* vi */,
 				3BE9F3DD220AFB90002C11BE /* fr */,
+				63A0346B22B8CA09006AFE17 /* fr-CA */,
+				63A0347322B8CA2D006AFE17 /* es-US */,
+				63A0347B22B8CA43006AFE17 /* en-CA */,
 			);
 			name = FaceDetectionAlertController.xib;
 			sourceTree = "<group>";
@@ -539,6 +577,9 @@
 				3BE9F3CC220AFB6F002C11BE /* Base */,
 				3BE9F3EF220AFBFE002C11BE /* fr */,
 				3BE9F3F0220AFC04002C11BE /* vi */,
+				63A0346E22B8CA09006AFE17 /* fr-CA */,
+				63A0347622B8CA2D006AFE17 /* es-US */,
+				63A0347E22B8CA44006AFE17 /* en-CA */,
 			);
 			name = VerIDRegistrationViewController.xib;
 			sourceTree = "<group>";
@@ -549,6 +590,9 @@
 				3BE9F3CE220AFB70002C11BE /* Base */,
 				3BE9F3EA220AFBCD002C11BE /* fr */,
 				3BE9F3EC220AFBD4002C11BE /* vi */,
+				63A0346D22B8CA09006AFE17 /* fr-CA */,
+				63A0347522B8CA2D006AFE17 /* es-US */,
+				63A0347D22B8CA43006AFE17 /* en-CA */,
 			);
 			name = Tips.storyboard;
 			sourceTree = "<group>";
@@ -559,6 +603,9 @@
 				3BE9F3D0220AFB71002C11BE /* Base */,
 				3BE9F3E5220AFBBF002C11BE /* vi */,
 				3BE9F3E6220AFBC1002C11BE /* fr */,
+				63A0346C22B8CA09006AFE17 /* fr-CA */,
+				63A0347422B8CA2D006AFE17 /* es-US */,
+				63A0347C22B8CA43006AFE17 /* en-CA */,
 			);
 			name = Result.storyboard;
 			sourceTree = "<group>";
@@ -569,6 +616,9 @@
 				3BE9F3D2220AFB72002C11BE /* Base */,
 				3BE9F3DF220AFBA2002C11BE /* vi */,
 				3BE9F3E0220AFBA5002C11BE /* fr */,
+				63A0347222B8CA0A006AFE17 /* fr-CA */,
+				63A0347A22B8CA2D006AFE17 /* es-US */,
+				63A0348222B8CA44006AFE17 /* en-CA */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -580,6 +630,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -645,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -708,7 +760,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CSD8L9EK66;
+				DEVELOPMENT_TEAM = 5456696HR3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -737,7 +789,7 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CSD8L9EK66;
+				DEVELOPMENT_TEAM = 5456696HR3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

@@ -13,7 +13,7 @@ import AVFoundation
 import os
 
 /// Ver-ID session
-@objc public class VerIDSession: NSObject, ImageProviderService, VerIDViewControllerDelegate, SessionOperationDelegate, FaceDetectionAlertControllerDelegate, ResultViewControllerDelegate, TipsViewControllerDelegate {
+@objc open class VerIDSession: NSObject, ImageProviderService, VerIDViewControllerDelegate, SessionOperationDelegate, FaceDetectionAlertControllerDelegate, ResultViewControllerDelegate, TipsViewControllerDelegate {
     
     @objc public enum SessionError: Int, Error {
         case failedToStart
@@ -40,7 +40,7 @@ import os
     
     // MARK: - Private properties
     
-    private var viewController: (UIViewController & VerIDViewControllerProtocol)?
+    public var viewController: (UIViewController & VerIDViewControllerProtocol)?
     
     private lazy var operationQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -84,7 +84,7 @@ import os
     // MARK: - Public methods
     
     /// Start the session
-    @objc public func start() {
+    @objc open func start() {
         DispatchQueue.main.async {
             if let videoURL = self.settings.videoURL, let videoWriterFactory = self.videoWriterFactory {
                 if FileManager.default.isDeletableFile(atPath: videoURL.path) {
@@ -113,7 +113,7 @@ import os
     }
     
     /// Cancel the session
-    @objc public func cancel() {
+    @objc open func cancel() {
         self.operationQueue.cancelAllOperations()
         self.viewController = nil
         DispatchQueue.main.async {
@@ -130,7 +130,7 @@ import os
     
     // MARK: - Private methods
     
-    private func startOperations() {
+    @objc public func startOperations() {
         self.imageQueue = DispatchQueue(label: "com.appliedrec.image", qos: .userInitiated, attributes: [], autoreleaseFrequency: .inherit, target: nil)
         self.viewController?.clearOverlays()
         self.startTime = CACurrentMediaTime()
