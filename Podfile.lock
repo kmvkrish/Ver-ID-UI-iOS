@@ -1,5 +1,5 @@
 PODS:
-  - Ver-ID-Core (1.1.0)
+  - Ver-ID-Core (1.6.0)
 
 DEPENDENCIES:
   - Ver-ID-Core (~> 1.1)
@@ -9,7 +9,7 @@ SPEC REPOS:
     - Ver-ID-Core
 
 SPEC CHECKSUMS:
-  Ver-ID-Core: df64a547a88f3d86fefc6ea4f53963425d708002
+  Ver-ID-Core: c5c4945a9b746cac4e78f488a6bc0f7abfcbc93f
 
 PODFILE CHECKSUM: 44893c0dcb1d57a1c3e1c7f65c217020e1184443
 

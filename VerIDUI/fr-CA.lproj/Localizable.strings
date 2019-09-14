@@ -1,22 +1,75 @@
-"Turn your head in the direction of the arrow" = "Turn your head in the direction of the arrow";
-"Great. You are now registered." = "Great. You are now registered.";
-"Great. You authenticated using your face." = "Great. You authenticated using your face.";
-"Great. Session succeeded." = "Great. Session succeeded.";
-"Registration failed" = "Registration failed";
-"Authentication failed" = "Authentication failed";
-"Session failed" = "Session failed";
-"Faces not suitable for recognition" = "Faces not suitable for recognition";
-"User not registered" = "User not registered";
-"Bearing not registered for user" = "Bearing %1$@ not registered for user %2$@";
-"Face not found" = "Face not found";
-"Unable to decode image" = "Unable to decode image";
-"Missing API secret" = "Missing API secret";
-"Missing resources URL" = "Missing resources URL";
-"Unable to initialize resource loader" = "Unable to initialize resource loader";
-"Please go to settings and enable camera in the settings for app." = "Please go to settings and enable camera in the settings for %@.";
-"Preparing face detection" = "Preparing face detection";
-"Align your face with the oval" = "Align your face with the oval";
-"Great, hold it" = "Great, hold it";
-"Hold it" = "Hold it";
-"Slowly turn to follow the arrow" = "Slowly turn to follow the arrow";
-"You may have turned too far. Only turn in the requested direction until the oval turns green." = "You may have turned too far. Only turn in the requested direction until the oval turns green.";
+/* (No Comment) */
+"Align your face with the oval" = "Alignez votre visage avec l'ovale";
+
+/* Displayed when an authentication session fails. */
+"Authentication failed" = "Échec de l'authentification";
+
+/* (No Comment) */
+"Bearing not registered for user" = "Portant %1$@ not registered for user %2$@";
+
+/* (No Comment) */
+"Face not found" = "Visage non détecté";
+
+/* (No Comment) */
+"Faces not suitable for recognition" = "Visages non appropriés pour la reconnaissance";
+
+/* Displayed above the face when the user correctly followed the directions and should stay still. */
+"Great, hold it" = "Parfait, ne bougez plus";
+
+/* Displayed when a liveness detection session succeeds. */
+"Great. Session succeeded." = "Parfait. La séance a réussi.";
+
+/* Displayed when a registration session succeeds. */
+"Great. You are now registered." = "Parfait. Vous êtes maintenant inscrit.";
+
+/* Displayed when an authentication session succeeds. */
+"Great. You authenticated using your face." = "Parfait. Vous avez effectué votre authentification avec votre visage.";
+
+/* Spoken direction when the user correctly follows the directions and should stay still. */
+"Hold it" = "Ne bougez plus";
+
+/* (No Comment) */
+"Missing API secret" = "Secret API manquant";
+
+/* (No Comment) */
+"Missing resources URL" = "Adresses URL de ressources manquantes";
+
+/* Label on a button used to dismiss an alert dialog */
+"OK" = "OK";
+
+/* Instruction displayed to the user if they disable access to the camera */
+"Please go to settings and enable camera in the settings for app." = "Veuillez accéder aux paramètres et activer la caméra dans les paramètres pour %@.";
+
+/* Shown in a dialog as an explanation why the face session is failing */
+"Please turn slowly" = "Veuillez tourner lentement";
+
+/* Displayed above the face when the session is finishing. */
+"Please wait" = "Veuillez patienter";
+
+/* Displayed in the camera view when the app is preparing face detection */
+"Preparing face detection" = "Préparation de la détection du visage";
+
+/* Displayed when a registration session fails. */
+"Registration failed" = "Échec de l'inscription";
+
+/* Displayed when a liveness detection session fails. */
+"Session failed" = "Échec de la session";
+
+/* Displayed as an instruction during face detection along with an arrow indicating direction */
+"Slowly turn to follow the arrow" = "Tournez lentement en suivant la flèche";
+
+/* Shown in a dialog as an instruction */
+"Turn your head in the direction of the arrow" = "Tournez votre tête en suivant la direction de la flèche";
+
+/* (No Comment) */
+"Unable to decode image" = "Impossible de décoder l'image";
+
+/* (No Comment) */
+"Unable to initialize resource loader" = "Impossible de lancer le chargeur de ressources";
+
+/* (No Comment) */
+"User not registered" = "L'utilisateur n'est pas inscrit";
+
+/* Shown in a dialog as an explanation of why the face session is failing */
+"You may have turned too far. Only turn in the requested direction until the oval turns green." = "Vous avez peut-être trop tourné. Ne tournez que dans la direction demandée, jusqu'à ce que l'ovale devienne vert.";
+

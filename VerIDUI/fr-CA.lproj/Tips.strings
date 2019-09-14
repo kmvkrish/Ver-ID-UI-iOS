@@ -1,36 +1,36 @@
+/* Class = "UITextView"; text = "Avoid standing in a light that throws sharp shadows like in sharp sunlight or directly under a lamp."; ObjectID = "8NW-Sv-4Sx"; */
+"8NW-Sv-4Sx.text" = "Évitez de vous positionner sous un éclairage qui crée des ombres prononcées, comme sous un soleil plombant ou directement sous une lampe.";
 
 /* Class = "UITextView"; text = "If you can, take off your glasses."; ObjectID = "20I-rV-WbV"; */
-"20I-rV-WbV.text" = "If you can, take off your glasses.";
-
-/* Class = "UITextView"; text = "Avoid standing in a light that throws sharp shadows like in sharp sunlight or directly under a lamp."; ObjectID = "8NW-Sv-4Sx"; */
-"8NW-Sv-4Sx.text" = "Avoid standing in a light that throws sharp shadows like in sharp sunlight or directly under a lamp.";
-
-/* Class = "UINavigationItem"; title = "Tip 3 of 3"; ObjectID = "Gd6-hc-v3R"; */
-"Gd6-hc-v3R.title" = "Tip 3 of 3";
-
-/* Class = "UITextView"; text = "Avoid standing in front of busy backgrounds."; ObjectID = "Iv3-s4-hpT"; */
-"Iv3-s4-hpT.text" = "Avoid standing in front of busy backgrounds.";
-
-/* Class = "UIBarButtonItem"; title = "Tip 2"; ObjectID = "Je9-EC-2VG"; */
-"Je9-EC-2VG.title" = "Tip 2";
-
-/* Class = "UIBarButtonItem"; title = "Tip 3"; ObjectID = "PzD-sM-CyD"; */
-"PzD-sM-CyD.title" = "Tip 3";
-
-/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "QJX-At-EV2"; */
-"QJX-At-EV2.title" = "Next";
-
-/* Class = "UINavigationItem"; title = "Tip 1 of 3"; ObjectID = "VuJ-Zx-hiJ"; */
-"VuJ-Zx-hiJ.title" = "Tip 1 of 3";
+"20I-rV-WbV.text" = "Si possible, retirez vos lunettes.";
 
 /* Class = "UINavigationItem"; title = "Tip 2 of 3"; ObjectID = "gCA-SE-pb5"; */
-"gCA-SE-pb5.title" = "Tip 2 of 3";
+"gCA-SE-pb5.title" = "Astuce 2 de 3";
+
+/* Class = "UINavigationItem"; title = "Tip 3 of 3"; ObjectID = "Gd6-hc-v3R"; */
+"Gd6-hc-v3R.title" = "Astuce 3 de 3";
 
 /* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "hdv-et-nrL"; */
-"hdv-et-nrL.title" = "Next";
+"hdv-et-nrL.title" = "Suivant";
+
+/* Class = "UITextView"; text = "Avoid standing in front of busy backgrounds."; ObjectID = "Iv3-s4-hpT"; */
+"Iv3-s4-hpT.text" = "Évitez de vous tenir devant un arrière-plan chargé.";
 
 /* Class = "UIBarButtonItem"; title = "Tip 1"; ObjectID = "jCc-rf-xPk"; */
-"jCc-rf-xPk.title" = "Tip 1";
+"jCc-rf-xPk.title" = "Astuce 1";
+
+/* Class = "UIBarButtonItem"; title = "Tip 2"; ObjectID = "Je9-EC-2VG"; */
+"Je9-EC-2VG.title" = "Astuce 2";
 
 /* Class = "UINavigationItem"; title = "Tips"; ObjectID = "oBp-lP-cs9"; */
-"oBp-lP-cs9.title" = "Tips";
+"oBp-lP-cs9.title" = "Astuces";
+
+/* Class = "UIBarButtonItem"; title = "Tip 3"; ObjectID = "PzD-sM-CyD"; */
+"PzD-sM-CyD.title" = "Astuce 3";
+
+/* Class = "UIBarButtonItem"; title = "Next"; ObjectID = "QJX-At-EV2"; */
+"QJX-At-EV2.title" = "Suivant";
+
+/* Class = "UINavigationItem"; title = "Tip 1 of 3"; ObjectID = "VuJ-Zx-hiJ"; */
+"VuJ-Zx-hiJ.title" = "Astuce 1 de 3";
+

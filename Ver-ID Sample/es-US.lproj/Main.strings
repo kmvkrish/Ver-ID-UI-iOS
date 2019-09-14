@@ -1,4 +1,3 @@
-
 /* Class = "UILabel"; text = "Registered"; ObjectID = "2JG-vJ-IOq"; */
 "2JG-vJ-IOq.text" = "Registered";
 
@@ -11,29 +10,17 @@
 /* Class = "UINavigationItem"; title = "Loading Ver-ID"; ObjectID = "8Zp-bI-rFx"; */
 "8Zp-bI-rFx.title" = "Loading Ver-ID";
 
-/* Class = "UINavigationItem"; title = "Scan to import"; ObjectID = "Dvh-0c-CvW"; */
-"Dvh-0c-CvW.title" = "Scan to import";
-
-/* Class = "UINavigationItem"; title = "Failed to load Ver-ID"; ObjectID = "JKa-WB-qOh"; */
-"JKa-WB-qOh.title" = "Failed to load Ver-ID";
-
-/* Class = "UIBarButtonItem"; title = "Register"; ObjectID = "LJe-di-PqA"; */
-"LJe-di-PqA.title" = "Register";
-
-/* Class = "UIViewController"; title = "Error"; ObjectID = "PK2-fj-HWm"; */
-"PK2-fj-HWm.title" = "Error";
-
-/* Class = "UIBarButtonItem"; title = "Help"; ObjectID = "R3t-fQ-Tgt"; */
-"R3t-fQ-Tgt.title" = "Help";
-
 /* Class = "UIButton"; normalTitle = "Authenticate"; ObjectID = "aWt-SU-8ff"; */
 "aWt-SU-8ff.normalTitle" = "Authenticate";
+
+/* Class = "UINavigationItem"; title = "Scan Code in App"; ObjectID = "cjH-bp-pXX"; */
+"cjH-bp-pXX.title" = "Scan Code in App";
 
 /* Class = "UINavigationItem"; title = "Person SDK Sample"; ObjectID = "cL7-3s-FVL"; */
 "cL7-3s-FVL.title" = "Person SDK Sample";
 
-/* Class = "UINavigationItem"; title = "Scan Code in App"; ObjectID = "cjH-bp-pXX"; */
-"cjH-bp-pXX.title" = "Scan Code in App";
+/* Class = "UINavigationItem"; title = "Scan to import"; ObjectID = "Dvh-0c-CvW"; */
+"Dvh-0c-CvW.title" = "Scan to import";
 
 /* Class = "UILabel"; text = "Launch this app on another device, share registration and scan the code presented by the other app."; ObjectID = "fLC-NZ-cfG"; */
 "fLC-NZ-cfG.text" = "Launch this app on another device, share registration and scan the code presented by the other app.";
@@ -44,8 +31,14 @@
 /* Class = "UIBarButtonItem"; title = "Import"; ObjectID = "ivt-Zt-EBE"; */
 "ivt-Zt-EBE.title" = "Import";
 
+/* Class = "UINavigationItem"; title = "Failed to load Ver-ID"; ObjectID = "JKa-WB-qOh"; */
+"JKa-WB-qOh.title" = "Failed to load Ver-ID";
+
 /* Class = "UIButton"; normalTitle = "Retry"; ObjectID = "kPu-Rp-cPg"; */
 "kPu-Rp-cPg.normalTitle" = "Retry";
+
+/* Class = "UIBarButtonItem"; title = "Register"; ObjectID = "LJe-di-PqA"; */
+"LJe-di-PqA.title" = "Register";
 
 /* Class = "UILabel"; text = "Register the downloaded faces of this person?"; ObjectID = "mtp-Qx-n4n"; */
 "mtp-Qx-n4n.text" = "Register the downloaded faces of this person?";
@@ -53,8 +46,15 @@
 /* Class = "UIBarButtonItem"; title = "Register"; ObjectID = "oYm-oJ-irQ"; */
 "oYm-oJ-irQ.title" = "Register";
 
+/* Class = "UIViewController"; title = "Error"; ObjectID = "PK2-fj-HWm"; */
+"PK2-fj-HWm.title" = "Error";
+
 /* Class = "UIButton"; normalTitle = "Register more faces"; ObjectID = "qb8-As-QjX"; */
 "qb8-As-QjX.normalTitle" = "Register more faces";
 
+/* Class = "UIBarButtonItem"; title = "Help"; ObjectID = "R3t-fQ-Tgt"; */
+"R3t-fQ-Tgt.title" = "Help";
+
 /* Class = "UINavigationItem"; title = "Person SDK Sample"; ObjectID = "rcE-a5-WeR"; */
 "rcE-a5-WeR.title" = "Person SDK Sample";
+
