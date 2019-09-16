@@ -35,12 +35,17 @@ import os
     /// Session delegate
     @objc public weak var delegate: VerIDSessionDelegate?
     
+    /// Delegate that manages presenting the session views
+    @objc public weak var viewDelegate: VerIDSessionViewDelegate?
+    
     /// Session settings
     @objc public let settings: VerIDSessionSettings
     
-    // MARK: - Private properties
+    let environment: VerID
     
     public var viewController: (UIViewController & VerIDViewControllerProtocol)?
+    
+    // MARK: - Private properties
     
     private lazy var operationQueue: OperationQueue = {
         let queue = OperationQueue()
@@ -71,6 +76,7 @@ import os
     ///   - environment: Ver-ID environment used by factory classes
     ///   - settings: Session settings
     @objc public init(environment: VerID, settings: VerIDSessionSettings) {
+        self.environment = environment
         self.settings = settings
         self.faceDetectionFactory = VerIDFaceDetectionServiceFactory(environment: environment)
         self.resultEvaluationFactory = VerIDResultEvaluationServiceFactory(environment: environment)
@@ -92,10 +98,6 @@ import os
                 }
                 self.videoWriterService = try? videoWriterFactory.makeVideoWriterService(url: videoURL)
             }
-            guard var root = UIApplication.shared.keyWindow?.rootViewController else {
-                self.delegate?.session(self, didFinishWithResult: VerIDSessionResult(error: SessionError.failedToStart))
-                return
-            }
             do {
                 self.viewController = try self.sessionViewControllersFactory.makeVerIDViewController()
             } catch {
@@ -103,11 +105,6 @@ import os
                 return
             }
             self.viewController?.delegate = self
-            while let presented = root.presentedViewController {
-                root = presented
-            }
-            self.navigationController = UINavigationController(rootViewController: self.viewController!)
-            root.present(self.navigationController!, animated: true)
             self.startOperations()
         }
     }
@@ -117,20 +114,81 @@ import os
         self.operationQueue.cancelAllOperations()
         self.viewController = nil
         DispatchQueue.main.async {
-            guard let navController = self.navigationController else {
-                self.delegate?.sessionWasCanceled(self)
-                return
-            }
-            self.navigationController = nil
-            navController.dismiss(animated: true) {
+            self.closeViews {
                 self.delegate?.sessionWasCanceled(self)
             }
         }
     }
     
+    // MARK: - Methods to overwrite to implement custom user interface
+    
+    /// Present view controller that provides images for face detection
+    ///
+    /// - Parameter viewController: Ver-ID view controller
+    @objc private func presentVerIDViewController(_ viewController: UIViewController & VerIDViewControllerProtocol) {
+        if let viewDelegate = self.viewDelegate {
+            viewDelegate.presentVerIDViewController(viewController)
+            return
+        }
+        if self.navigationController == nil {
+            guard var root = UIApplication.shared.keyWindow?.rootViewController else {
+                self.delegate?.session(self, didFinishWithResult: VerIDSessionResult(error: SessionError.failedToStart))
+                return
+            }
+            while let presented = root.presentedViewController {
+                root = presented
+            }
+            self.navigationController = UINavigationController(rootViewController: viewController)
+            root.present(self.navigationController!, animated: true)
+        } else {
+            self.navigationController!.viewControllers = [viewController]
+        }
+    }
+    
+    /// Present view controller showing the result of the session
+    ///
+    /// - Parameter viewController: Result view controller
+    @objc private func presentResultViewController(_ viewController: UIViewController & ResultViewControllerProtocol) {
+        if let viewDelegate = self.viewDelegate {
+            viewDelegate.presentResultViewController(viewController)
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    /// Present view controller showing tips on running Ver-ID sessions
+    ///
+    /// - Parameter viewController: Tips view controller
+    @objc private func presentTipsViewController(_ viewController: UIViewController & TipsViewControllerProtocol) {
+        if let viewDelegate = self.viewDelegate {
+            viewDelegate.presentTipsViewController(viewController)
+            return
+        }
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    /// Close views when session finishes
+    ///
+    /// - Parameter callback: Callback to be issued when views are closed
+    @objc private func closeViews(callback: @escaping () -> Void) {
+        if let viewDelegate = self.viewDelegate {
+            viewDelegate.closeViews(callback: callback)
+            return
+        }
+        guard let navController = self.navigationController else {
+            callback()
+            return
+        }
+        self.navigationController = nil
+        navController.dismiss(animated: true) {
+            callback()
+        }
+    }
+    
     // MARK: - Private methods
     
-    @objc public func startOperations() {
+    private func startOperations() {
+        self.presentVerIDViewController(self.viewController!)
         self.imageQueue = DispatchQueue(label: "com.appliedrec.image", qos: .userInitiated, attributes: [], autoreleaseFrequency: .inherit, target: nil)
         self.viewController?.clearOverlays()
         self.startTime = CACurrentMediaTime()
@@ -142,7 +200,7 @@ import os
             self.showResult(VerIDSessionResult(error: error))
             return
         }
-        let op = SessionOperation(imageProvider: self, faceDetection: self.faceDetection!, resultEvaluation: self.resultEvaluationFactory.makeResultEvaluationService(settings: self.settings), imageWriter: try? self.imageWriterFactory.makeImageWriterService())
+        let op = SessionOperation(environment: self.environment, imageProvider: self, faceDetection: self.faceDetection!, resultEvaluation: self.resultEvaluationFactory.makeResultEvaluationService(settings: self.settings), imageWriter: try? self.imageWriterFactory.makeImageWriterService())
         op.delegate = self
         let finishOp = BlockOperation()
         finishOp.addExecutionBlock { [weak finishOp, weak self] in
@@ -170,7 +228,7 @@ import os
                 do {
                     let resultViewController = try self.sessionViewControllersFactory.makeResultViewController(result: result)
                     resultViewController.delegate = self
-                    self.navigationController?.pushViewController(resultViewController, animated: true)
+                    self.presentResultViewController(resultViewController)
                 } catch {
                     self.finishWithResult(VerIDSessionResult(error: error))
                 }
@@ -184,12 +242,7 @@ import os
         self.operationQueue.cancelAllOperations()
         self.viewController = nil
         DispatchQueue.main.async {
-            guard let navController = self.navigationController else {
-                self.delegate?.session(self, didFinishWithResult: result)
-                return
-            }
-            self.navigationController = nil
-            navController.dismiss(animated: true) {
+            self.closeViews {
                 self.delegate?.session(self, didFinishWithResult: result)
             }
         }
@@ -204,8 +257,7 @@ import os
     public func dequeueImage() throws -> VerIDImage {
         if imageLock.wait(timeout: self.startDispatchTime+self.settings.expiryTime) == .timedOut {
             // Session expired
-            // TODO
-            throw NSError(domain: "com.appliedrec.verid", code: 1, userInfo: nil)
+            throw VerIDError.sessionTimeout
         }
         guard let img = self.image else {
             throw NSError(domain: "com.appliedrec.verid", code: 1, userInfo: nil)
@@ -289,13 +341,6 @@ import os
                 return
             }
             self.image = VerIDImage(sampleBuffer: buffer!, orientation: orientation)
-            let convertToGrayscaleSignpost = self.imageAcquisitionSignposting.createSignpost(name: "Convert image to grayscale")
-            self.imageAcquisitionSignposting.logStart(signpost: convertToGrayscaleSignpost)
-            if let (grayscale, size) = try? ImageUtil.grayscaleBufferFromVerIDImage(self.image!) {
-                self.image!.grayscalePixels = grayscale
-                self.image!.size = size
-            }
-            self.imageAcquisitionSignposting.logEnd(signpost: convertToGrayscaleSignpost)
             self.imageLock.signal()
         }
     }
@@ -350,7 +395,7 @@ import os
                 do {
                     let tipsController = try self.sessionViewControllersFactory.makeTipsViewController()
                     tipsController.tipsViewControllerDelegate = self
-                    self.navigationController?.pushViewController(tipsController, animated: true)
+                    self.presentTipsViewController(tipsController)
                 } catch {
                     let result = VerIDSessionResult(error: error)
                     self.finishWithResult(result)
